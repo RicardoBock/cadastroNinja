@@ -1,4 +1,4 @@
-package dev.java10x.cadastroNinjas;
+package dev.java10x.cadastroNinjas.Ninjas.Controller;
 
 
 import org.springframework.web.bind.annotation.GetMapping;
@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping
-public class NinjaController {
+public class   NinjaController {
 
     @GetMapping("/boasvindas")
     public String boasVindas(){
