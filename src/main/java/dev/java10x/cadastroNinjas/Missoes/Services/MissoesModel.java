@@ -1,15 +1,16 @@
 package dev.java10x.cadastroNinjas.Missoes.Services;
 import dev.java10x.cadastroNinjas.Ninjas.Services.NinjaModel;
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import java.util.List;
 
 @Entity
 @Table(name = "tb_missoes")
+@Data //Cria getters e setters
 @NoArgsConstructor
 @AllArgsConstructor
+
 
 public class MissoesModel {
 
@@ -27,19 +28,4 @@ public class MissoesModel {
     private List<NinjaModel> ninjas;
 
 
-    public String getTitulo() {
-        return titulo;
-    }
-
-    public void setTitulo(String titulo) {
-        this.titulo = titulo;
-    }
-
-    public String getDescricao() {
-        return descricao;
-    }
-
-    public void setDescricao(String descricao) {
-        this.descricao = descricao;
-    }
 }
