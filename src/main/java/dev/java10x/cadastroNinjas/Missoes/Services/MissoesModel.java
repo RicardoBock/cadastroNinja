@@ -1,11 +1,15 @@
 package dev.java10x.cadastroNinjas.Missoes.Services;
 import dev.java10x.cadastroNinjas.Ninjas.Services.NinjaModel;
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
 
 import java.util.List;
 
 @Entity
 @Table(name = "tb_missoes")
+@NoArgsConstructor
+@AllArgsConstructor
 
 public class MissoesModel {
 
@@ -21,15 +25,6 @@ public class MissoesModel {
     //@OneToMany - Uma missão pode ter vários ninjas
     @OneToMany(mappedBy = "missoes")
     private List<NinjaModel> ninjas;
-
-    public MissoesModel() {
-    }
-
-    public MissoesModel(String titulo, String descricao) {
-        this.titulo = titulo;
-        this.descricao = descricao;
-    }
-
 
 
     public String getTitulo() {

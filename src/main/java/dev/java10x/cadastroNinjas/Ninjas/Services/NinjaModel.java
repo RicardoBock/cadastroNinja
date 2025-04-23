@@ -2,6 +2,9 @@ package dev.java10x.cadastroNinjas.Ninjas.Services;
 
 import dev.java10x.cadastroNinjas.Missoes.Services.MissoesModel;
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
+
 
 import java.util.List;
 
@@ -9,6 +12,8 @@ import java.util.List;
 @Entity
 //Table - Cadastro de ninjas
 @Table(name = "tb_cadastro")
+@NoArgsConstructor
+@AllArgsConstructor
 
 
 public class NinjaModel {
@@ -28,20 +33,6 @@ public class NinjaModel {
     @ManyToOne
     @JoinColumn(name = "missoes_id") //Foreign Key
     private List<MissoesModel> missoes;
-
-    //No Args Constructor
-    public NinjaModel(){
-
-    }
-
-    //All Args Constructor
-    public NinjaModel(String nome, int idade, String email){
-        this.nome = nome;
-        this.idade = idade;
-        this.email = email;
-    }
-
-
 
 
     public String getNome() {
