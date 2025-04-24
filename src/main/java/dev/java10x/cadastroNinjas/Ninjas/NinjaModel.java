@@ -20,11 +20,18 @@ public class NinjaModel {
 
     @Id     //Atributo abaixo é o ID
     @GeneratedValue(strategy = GenerationType.IDENTITY) //Estratégia de como será gerado o valor de ID
+    @Column(name = "id")
     private Long id;
 
+    @Column(name = "nome")
     private String nome;
 
+    @Column(name = "idade")
     private int idade;
+
+    @Column(name = "img_url")
+    private String imgUrl;
+
 
     @Column(unique = true)
     private String email;
